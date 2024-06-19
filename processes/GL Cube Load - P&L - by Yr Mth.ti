@@ -1,0 +1,266 @@
+#region Prolog
+
+#############
+### Process Details
+#############
+# Created by: Melwin Jose
+
+# Date: 23/02/2024
+# Description: This Process updates the data for P&L & BS in General Ledger cube. This process also updates the Profit and Loss Cube (Epilog)
+#
+
+#############################################
+### Logic for Start Date and End Date
+#############################################
+
+sStartDate=ELCOMP( 'Dates', pYear, 1 );
+
+nUTCDateFormatId = NewDateFormatter('en-AU', 'Australia/Sydney', 'serial', '', 'datetime');
+sDatePattern = 'yyyy-MM-dd';
+
+sToday=FormatDate( Now(), sDatePattern, nUTCDateFormatId );
+
+sEndDate=ATTRS('Date',sToday,'Prev Date');
+
+sStartDateYear=ELPAR( 'Date',sStartDate, 1 );
+sEndDateYear=ELPAR( 'Date', sEndDate, 1 );
+
+if (sStartDateYear@<>sEndDateYear); 
+    sEndDate=ELCOMP( 'Dates', pYear, 13 );
+endif;
+
+#############################################
+### Constants
+#############################################
+
+tCubeName ='General Ledger';
+
+sCurr=ATTRS( 'Entity', pEntity,'Local Currency' );
+
+sNow = NOW() ;
+sTime = TIMST( sNow, '\h:\i:\s') ;
+sProcess = GetProcessName ;
+nRecordCount = 0 ;
+nRecordLoaded = 0 ;
+nRecordRejected = 0 ;
+sSourceViewName = sProcess | ' - ' | NumberToString( ROUND( RAND() * 100000 ) ) ;
+sSourceSubName = sProcess | ' - ' | NumberToString( ROUND( RAND() * 100000 ) ) ;
+sTargetViewName = sProcess | ' - ' | NumberToString( ROUND( RAND() * 100000 ) ) ;
+sTargetSubName = sProcess | ' - ' | NumberToString( ROUND( RAND() * 100000 ) ) ;
+
+#############################################
+### Zero out Target Area
+#############################################
+
+IF( ViewExists( tCubeName , sTargetViewName ) = 1 ) ;
+    ViewDestroy( tCubeName , sTargetViewName ) ;
+ENDIF ;
+ViewCreate( tCubeName , sTargetViewName , 1 ) ;
+
+nCounter = 1;
+
+While(TABDIM( tCubeName , nCounter ) @<> '' ) ;
+
+    sDimName = TABDIM( tCubeName , nCounter ) ;
+    IF( SubsetExists( sDimName , sTargetSubName ) = 1 ) ;
+        SubsetDestroy( sDimName , sTargetSubName ) ;
+    ENDIF ;
+
+    IF( sDimName @= 'Year' ) ;
+    SubsetCreate( sDimName , sTargetSubName , 1 ) ;
+    SubsetElementInsert( sDimName , sTargetSubName ,pYear , 1 ) ;
+    ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSEIF( sDimName @= 'Month' ) ;
+    SubsetCreate( sDimName , sTargetSubName , 1 ) ;
+    SubsetElementInsert( sDimName , sTargetSubName , pMonth , 1 ) ;
+    ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSEIF( sDimName @= 'Measure GL' ) ;
+        SubsetCreate( sDimName , sTargetSubName , 1 ) ;
+        SubsetElementInsert( sDimName , sTargetSubName , 'GL Movement' , 1 ) ;
+        ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSEIF( sDimName @= 'Version' ) ;
+        SubsetCreate( sDimName , sTargetSubName , 1 ) ;
+        SubsetElementInsert( sDimName , sTargetSubName , 'Actual' , 1 ) ;
+        ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSEIF( sDimName @= 'Entity' ) ;
+        SubsetCreate( sDimName , sTargetSubName , 1 ) ;
+        SubsetElementInsert( sDimName , sTargetSubName , pEntity , 1 ) ;
+        ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSEIF( sDimName @= 'Account GL' ) ;
+      SubsetCreateByMDX ( sTargetSubName , '{FILTER(TM1FILTERBYLEVEL(TM1SUBSETALL([Account GL].[Account GL]), 0), ([Account GL].[Account GL].CURRENTMEMBER.PROPERTIES("Type") = "Profit & Loss"))}' , 1);
+        ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSEIF( sDimName @= 'Currency' ) ;
+        SubsetCreate( sDimName , sTargetSubName , 1 ) ;
+      SubsetElementInsert( sDimName , sTargetSubName , sCurr , 1 ) ;
+        ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+
+    ELSE ;
+        SubsetCreateByMDX ( sTargetSubName , '{TM1FILTERBYLEVEL( {TM1SUBSETALL( [' | sDimName | '] )}, 0)}' , 1 );
+        ViewSubsetAssign( tCubeName , sTargetViewName , sDimName, sTargetSubName ) ;
+    ENDIF ;
+    nCounter = nCounter +1;
+END ;
+
+ViewZeroOut( tCubeName , sTargetViewName ) ;
+
+
+#############################################
+### Build Data Source
+#############################################
+
+vs_SQL = '
+SELECT '''|pEntity|'''                                                                                                               AS Entity
+       , CONCAT(''FY-'',DATEPART(YEAR, DATEADD(MONTH, 6, [Posting Date])))      AS [Year]
+       , LEFT(DATENAME(MONTH,[Posting Date]),3)                                                         AS [Mth]
+       , [G_L Account No_]                                                                                                        AS Account
+       , CASE WHEN [Global Dimension 1 Code] IN (''HTEU'',''HTUS'',''IN'') THEN ''HT''
+                 WHEN [Global Dimension 1 Code] = '''' THEN ''Blank''
+                 ELSE [Global Dimension 1 Code]
+         END                                                                                                                                AS business_unit
+       , CASE WHEN ISNUMERIC([Global Dimension 2 Code]) = 1 THEN [Global Dimension 2 Code] 
+                 WHEN [Global Dimension 2 Code] = ''SALES'' THEN ''1000''
+                 WHEN [Global Dimension 2 Code] = ''CUS'' THEN ''4020''
+                 WHEN [Global Dimension 2 Code] = ''ENG'' THEN ''4040''
+                 WHEN [Global Dimension 2 Code] = ''FIN'' THEN ''5030''
+                 WHEN [Global Dimension 2 Code] = ''HRA'' THEN ''5030''
+                 WHEN [Global Dimension 2 Code] = ''ITC'' THEN ''5010''
+                 WHEN [Global Dimension 2 Code] = ''MKT'' THEN ''4030''
+                 WHEN [Global Dimension 2 Code] = ''SALS'' THEN ''1000''
+                 WHEN [Global Dimension 2 Code] = ''WAH'' THEN ''3030''
+                 ELSE ''Blank''
+         END                                                                                                              AS [cost_center]
+       , ''Blank''                                                                                                          AS [expense_type]
+       , '''|sCurr|'''                                                                                                        AS Currency
+       , SUM([Amount])                                                                                            AS Amount 
+ FROM [NAV_PROD].dbo.['|pEntity|'$G_L Entry]
+ WHERE [G_L Account No_] IN (SELECT [No_] FROM [NAV_PROD].dbo.['|pEntity|'$G_L Account] WHERE [Account Type] = 0 AND [Income_Balance] = 0)
+        AND CONCAT(''FY'',RIGHT(DATEPART(YEAR, DATEADD(MONTH, 6, [Posting Date])),2)) = '''|pYear|'''
+        AND CONVERT(CHAR(3), [Posting Date]) = '''|pMonth|'''
+ GROUP BY [G_L Account No_]
+       , CONCAT(''FY-'',DATEPART(YEAR, DATEADD(MONTH, 6, [Posting Date])))
+       , LEFT(DATENAME(MONTH,[Posting Date]),3)
+       , CASE WHEN [Global Dimension 1 Code] IN (''HTEU'',''HTUS'',''IN'') THEN ''HT''
+                 WHEN [Global Dimension 1 Code] = '''' THEN ''Blank''
+                 ELSE [Global Dimension 1 Code]
+         END
+       , CASE WHEN ISNUMERIC([Global Dimension 2 Code]) = 1 THEN [Global Dimension 2 Code] 
+                 WHEN [Global Dimension 2 Code] = ''SALES'' THEN ''1000''
+                 WHEN [Global Dimension 2 Code] = ''CUS'' THEN ''4020''
+                 WHEN [Global Dimension 2 Code] = ''ENG'' THEN ''4040''
+                 WHEN [Global Dimension 2 Code] = ''FIN'' THEN ''5030''
+                 WHEN [Global Dimension 2 Code] = ''HRA'' THEN ''5030''
+                 WHEN [Global Dimension 2 Code] = ''ITC'' THEN ''5010''
+                 WHEN [Global Dimension 2 Code] = ''MKT'' THEN ''4030''
+                 WHEN [Global Dimension 2 Code] = ''SALS'' THEN ''1000''
+                 WHEN [Global Dimension 2 Code] = ''WAH'' THEN ''3030''
+                 ELSE ''Blank''
+         END
+ HAVING SUM([Amount]) != 0
+ ORDER BY 2, 6
+';
+
+DataSourceType = 'ODBC';
+DataSourceNameForServer = 'BromicConnection';
+DataSourceNameForClient = 'BromicConnection';
+DataSourceQuery = vs_SQL;
+DatasourcePassword = 'RSTUSHr9S@Rg';
+
+#endregion
+#region Metadata
+
+IF(vBU@='OB');
+    ItemSkip;
+ELSEIF(vBU@='');
+vBU='Blank';
+elseif( vBU@='RFR' );
+vBU='RF';
+elseif( vBU@='HD' );
+vBU='PG';
+elseif( vBU@='SS' );
+vBU='SS Base';
+ENDIF;
+
+#############################################
+### Exception Handling
+#############################################
+
+IF (DIMIX( 'Account GL', vAccount )=0);
+    ASCIIOutput( './Exceptions/'|pYear|' ' |pEntity|' P&L Account Exceptions.csv', vAccount, 'Added as Orphans' );
+    DimensionElementInsertDirect( 'Account GL', '', vAccount, 'N' );
+    DimensionElementComponentAdd( 'Account GL', 'Orphans', vAccount, 1 );
+
+ENDIF;
+
+IF (DIMIX( 'Cost Centre', vCC )=0);
+    ASCIIOutput( './Exceptions/'|pYear|' ' |pEntity|' P&L Cost Centre Exceptions.csv', vCC, 'Cost Centre not present in the Dimension' );
+    ItemSkip;
+ENDIF;
+
+IF (DIMIX( 'Business Unit', vBU )=0);
+    ASCIIOutput( './Exceptions/'|pYear|' ' |pEntity|' P&L Business Unit Exceptions.csv', vBU, 'Business Unit not present in the Dimension' );
+    ItemSkip;
+ENDIF;
+
+#endregion
+#region Data
+
+ # IF ( vEntity @='HTJP' );
+ #    ASCIIOutput( './Exceptions/'|'PL'|' ' |pEntity|'  BS Extract.csv', vBU, vEntity, vYear, vMonth, vAccount, vCurr, vType, vCC, NumberToString( vAmount )  );
+ # ENDIF;
+
+#############################################
+### Data Remapping
+#############################################
+IF(vBU@='OB');
+    ItemSkip;
+ELSEIF(vBU@='');
+vBU='Blank';
+elseif( vBU@='RFR' );
+vBU='RF';
+elseif( vBU@='HD' );
+vBU='PG';
+elseif( vBU@='SS' );
+vBU='SS Base';
+ENDIF;
+
+#############################################
+### Exception Handling
+#############################################
+
+IF (DIMIX( 'Cost Centre', vCC )=0);
+   
+    ItemSkip;
+ENDIF;
+
+IF (DIMIX( 'Business Unit', vBU )=0);
+    
+    ItemSkip;
+ENDIF;
+
+#############################################
+### Data Load
+#############################################
+
+sAccountAttribute=ATTRS( 'Account GL', vAccount, 'Type' );
+
+CellIncrementN( vAmount, tCubeName,'Actual' ,vYear,vMonth,vBU,vEntity, sCurr, vCC, vType,vAccount,'GL Movement');
+
+CellIncrementN( vAmount, tCubeName,'Actual' ,vYear,vMonth,vBU,vEntity, 'Local', vCC, vType,vAccount,'GL Movement');
+
+
+#endregion
+#region Epilog
+
+#############################################
+### Sending Actual Data to Profit and Loss Cube
+#############################################
+
+ExecuteProcess( 'Data Load - GL to PnL','pVersion','Actual', 'pYear','All Years' , 'pMonth','All Months');
+
+#endregion

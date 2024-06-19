@@ -1,0 +1,100 @@
+#region Prolog
+
+#############
+### Process Details
+#############
+# Created by: Melwin Jose
+# Date: 11/02/2024
+# Description: This is Overnight Data Load process for past 2 years
+
+#############################################
+### Getting Previous Year
+#############################################
+
+    sNow = NOW() ;
+    sTime = TIMST( sNow, '\h:\i:\s') ;
+
+# CK ASCIIOutput( pYear|'StartTime.csv', sTime );
+
+#############################################
+### Execute for 'AMBR'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth',  'pEntity' , 'AMBR' ,  'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth',  'pEntity' , 'AMBR' , 'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'AMBR IND'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'AMBR IND' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'AMBR IND' , 'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'BRNZ'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'BRNZ' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth',  'pEntity' , 'BRNZ' , 'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'HTCA'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'HTCA' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'HTCA' , 'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'HTEU'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'HTEU' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'HTEU' ,  'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'HTJP'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'HTJP' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'HTJP' , 'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'HTUS'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'HTUS' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'HTUS' ,'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'BPS Holdings'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'BPS Holdings' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'BPS Holdings' ,'pYear' , pYear, 'pMonth', pMonth);
+
+#############################################
+### Execute for 'BRAU'
+#############################################
+
+ExecuteProcess( 'GL Cube Load - P&L - by Yr Mth', 'pEntity' , 'BRAU' , 'pYear' , pYear, 'pMonth', pMonth);
+
+ExecuteProcess( 'GL Cube Load - BS - by Yr Mth', 'pEntity' , 'BRAU' , 'pYear' , pYear, 'pMonth', pMonth);
+
+#endregion
+#region Epilog
+
+    sNow1 = NOW() ;
+    sTime1 = TIMST( sNow1, '\h:\i:\s') ;
+    sDiff=sNow-sNow1;
+    sTimeDiff = TIMST( sDiff, '\h:\i:\s') ;
+
+# CKASCIIOutput( pYear|'EndTime.csv',  sTime1, sTimeDiff  );
+#endregion

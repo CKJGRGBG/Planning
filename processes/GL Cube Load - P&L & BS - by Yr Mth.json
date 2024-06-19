@@ -1,0 +1,28 @@
+{
+	"@type":"Process",
+	"Name":"GL Cube Load - P&L & BS - by Yr Mth",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"GL Cube Load - P&L & BS - by Yr Mth.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pYear",
+			"Prompt":"Enter Year",
+			"Value":"FY20",
+			"Type":"String"
+		},
+		{
+			"Name":"pMonth",
+			"Prompt":"Entyer Month",
+			"Value":"Jun",
+			"Type":"String"
+		}
+	],
+	"Variables":[],
+	"UIData": "_ParameterConstraints=e30=\f",
+	"VariablesUIData": []
+}

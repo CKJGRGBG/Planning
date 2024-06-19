@@ -1,0 +1,114 @@
+{
+	"@type":"Process",
+	"Name":"GL Cube Load - P&L - by Yr Mth",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"GL Cube Load - P&L - by Yr Mth.ti",
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForServer":"BromicConnection",
+		"dataSourceNameForClient":"BromicConnection",
+		"userName":"bromicadmin",
+		"password":"RSTUSHr9S@Rg",
+		"query":"\r\nSELECT 'BRAU'\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS entity\r\n\t, CONCAT('FY-',DATEPART(YEAR, DATEADD(MONTH, 6, [Posting Date])))\tAS [year]\r\n\t, LEFT(DATENAME(MONTH,[Posting Date]),3)\t\t\t\t\t\t\tAS [mth]\r\n\t, [G_L Account No_]\t\t\t\t\t\t\t\t\t\t\t\t\tAS account\r\n\t, CASE WHEN [Global Dimension 1 Code] IN ('HTEU','HTUS','IN') THEN 'HT'\r\n\t\t   WHEN [Global Dimension 1 Code] = '' THEN 'Blank'\r\n\t\t   ELSE [Global Dimension 1 Code]\r\n\t  END\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS business_unit\r\n\t, CASE WHEN ISNUMERIC([Global Dimension 2 Code]) = 1 THEN [Global Dimension 2 Code] \r\n\t\t   WHEN [Global Dimension 2 Code] = 'SALES' THEN '1000'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'CUS' THEN '4020'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'ENG' THEN '4040'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'FIN' THEN '5030'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'HRA' THEN '5030'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'ITC' THEN '5010'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'MKT' THEN '4030'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'SALS' THEN '1000'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'WAH' THEN '3030'\r\n\t\t   ELSE 'Blank'\r\n\t  END\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS [cost_center]\r\n\t, 'Blank'\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS [expense_type]\r\n\t, 'AUD'\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS currency\r\n\t, SUM([Amount])\t\t\t\t\t\t\t\t\t\t\t\t\t\tAS amount\r\nFROM [NAV_PROD].dbo.[BRAU$G_L Entry]\r\nWHERE [G_L Account No_] IN (SELECT [No_] FROM [NAV_PROD].dbo.[BRAU$G_L Account] WHERE [Account Type] = 0 \tAND [Income_Balance] = 0)\r\n\tAND CONCAT('FY',RIGHT(DATEPART(YEAR, DATEADD(MONTH, 6, [Posting Date])),2)) = '?pYear?'\r\n\tAND CONVERT(CHAR(3), [Posting Date]) = '?pMonth?'\r\nGROUP BY [G_L Account No_]\r\n\t, CONCAT('FY-',DATEPART(YEAR, DATEADD(MONTH, 6, [Posting Date])))\r\n\t, LEFT(DATENAME(MONTH,[Posting Date]),3)\r\n\t, CASE WHEN [Global Dimension 1 Code] IN ('HTEU','HTUS','IN') THEN 'HT'\r\n\t\t   WHEN [Global Dimension 1 Code] = '' THEN 'Blank'\r\n\t\t   ELSE [Global Dimension 1 Code]\r\n\t  END\r\n\t, CASE WHEN ISNUMERIC([Global Dimension 2 Code]) = 1 THEN [Global Dimension 2 Code] \r\n\t\t   WHEN [Global Dimension 2 Code] = 'SALES' THEN '1000'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'CUS' THEN '4020'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'ENG' THEN '4040'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'FIN' THEN '5030'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'HRA' THEN '5030'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'ITC' THEN '5010'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'MKT' THEN '4030'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'SALS' THEN '1000'\r\n\t\t   WHEN [Global Dimension 2 Code] = 'WAH' THEN '3030'\r\n\t\t   ELSE 'Blank'\r\n\t  END\r\nHAVING SUM([Amount]) != 0"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pEntity",
+			"Prompt":"Enter Entity",
+			"Value":"BRAU",
+			"Type":"String"
+		},
+		{
+			"Name":"pYear",
+			"Prompt":"Enter Year",
+			"Value":"FY24",
+			"Type":"String"
+		},
+		{
+			"Name":"pMonth",
+			"Prompt":"Enter Month",
+			"Value":"Jun",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vEntity",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vYear",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vMonth",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vAccount",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vBU",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vCC",
+			"Type":"String",
+			"Position":6,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vType",
+			"Type":"String",
+			"Position":7,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vCurr",
+			"Type":"String",
+			"Position":8,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vAmount",
+			"Type":"Numeric",
+			"Position":9,
+			"StartByte":0,
+			"EndByte":0
+		}
+	],
+	"UIData": "_ParameterConstraints=e30=\f",
+	"VariablesUIData": [
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=33\fColType=827\f"
+	]
+}
