@@ -56,10 +56,6 @@
 			"[Currency].[Currency]": {
 				"Expression": "{[Currency].[Currency].MEMBERS}"
 			},
-			"[Version].[Version]": {
-				"SubsetName": "Budgeting",
-				"IsPublic": true
-			},
 			"[Product].[Product]": {
 				"SubsetName": "Default",
 				"IsPublic": true
