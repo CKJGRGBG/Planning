@@ -1,6 +1,6 @@
 {
 	"@type":"Process",
-	"Name":"CK TEST",
+	"Name":"CK TEST2",
 	"HasSecurityAccess":false,
 	"Code@Code.link":"CK TEST.ti",
 	"DataSource":
