@@ -12,6 +12,7 @@ sYMthNo=FormatDate( Now()-1, 'MM', nUTCDateFormatId);
 sYYear=FormatDate( Now()-1, 'YYYY', nUTCDateFormatId);
 sYYearNo = Year(sYDate)-1;
 
+#ck just to change something
 
 sFullYear = 'JulAugSepOctNovDecJanFebMarAprMayJun';
 
