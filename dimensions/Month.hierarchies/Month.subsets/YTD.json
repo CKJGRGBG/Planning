@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"YTD",
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Month].[Month].[YTD]} , {[Month].[Month].[YTD]} , RECURSIVE)}"
+}

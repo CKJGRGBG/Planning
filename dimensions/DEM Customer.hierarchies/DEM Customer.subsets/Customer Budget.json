@@ -1,0 +1,11 @@
+{
+	"@type":"Subset",
+	"Name":"Customer Budget",
+	"Alias":"Code and Description",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('DEM Customer')/Hierarchies('DEM Customer')/Elements('Total Customers')"
+		}
+	]
+}

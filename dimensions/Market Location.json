@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"Market Location",
+	"Hierarchies@Code.links":
+	[
+		"Market Location.hierarchies/Market Location.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Market Location')/Hierarchies('Market Location')"
+	}
+}

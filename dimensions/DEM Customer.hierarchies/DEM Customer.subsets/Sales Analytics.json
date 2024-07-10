@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Sales Analytics",
+	"Alias":"Code and Description",
+	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT(TM1SubsetToSet([DEM Customer].[DEM Customer] , \"Default\" , \"public\") , {[DEM Customer].[DEM Customer].[Total Customers by Country],[DEM Customer].[DEM Customer].[Total Customers by Sales Person],[DEM Customer].[DEM Customer].[Total Statistical Customers]})}"
+}

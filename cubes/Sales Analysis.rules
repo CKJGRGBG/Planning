@@ -1,0 +1,218 @@
+SKIPCHECK;
+
+# GP %
+['Margin @ Cost (%)']= 
+    (['Sales Analysis Measure':'Sales Analysis Measure':'Margin @ Cost ($)'] \ ['Gross Sales']);  
+    
+# Average Variable Margin %
+['Average Variable Margin (%)']= 
+    (['Average Variable Margin ($)'] \ ['Gross Sales']);      
+
+# Gross Sales AUD currency conversion for Forecast
+# CK 9-May-24
+['Version':'Forecast','Currency':'AUD', {'Gross Sales', 'COGS'}]=N:
+IF ( DB('}ElementAttributes_Entity', !Entity, 'Local Currency' ) @<> 'AUD',
+  DB('Sales Analysis', !Version, !Year, !Month, DB('}ElementAttributes_Entity', !'Entity', 'Local Currency' ), !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ) \ 
+  DB( 'FX Rates', 'Actual', !Year, !Month, DB('}ElementAttributes_Entity', !Entity, 'Local Currency'), 'Plan' ),
+  STET);
+          
+# Gross Sales AUD currency conversion for Budget
+# CK 9-May-24
+# CK excluded COGS 14-May-24
+['Version':'Budget','Currency':'AUD', {'Gross Sales'}]=N:
+IF ( DB('}ElementAttributes_Entity', !Entity, 'Local Currency' ) @<> 'AUD',
+  DB('Sales Analysis', !Version, !Year, !Month, DB('}ElementAttributes_Entity', !'Entity', 'Local Currency' ), !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ) \ 
+  DB( 'FX Rates', 'Actual', !Year, !Month, DB('}ElementAttributes_Entity', !Entity, 'Local Currency'), 'Plan' ),
+  STET);
+          
+# Gross Sales AUD currency conversion for actual
+# CK Changed to Plan rate, advised by Peter A, 9-May-24
+['Version':'Actual','Currency':'AUD', {'Gross Sales', 'COGS'}]=N:
+IF ( DB('}ElementAttributes_Entity', !Entity, 'Local Currency' ) @<> 'AUD',
+  DB('Sales Analysis', !Version, !Year, !Month, DB('}ElementAttributes_Entity', !'Entity', 'Local Currency' ), !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ) \
+  DB( 'FX Rates', !Version, !Year, !Month, DB('}ElementAttributes_Entity', !Entity, 'Local Currency'), 'Plan' ),
+  STET);
+          
+ # CK 14-May-24
+ # Local Currency
+ ['Currency':'Local', {'Gross Sales', 'COGS'}]= DB('Sales Analysis',!Version, !Year,!Month,DB('}ElementAttributes_Entity', !'Entity', 'Local Currency' ), !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' );
+
+
+ # CK 14-May-24
+ # Budget  COGS
+['Version':'Budget', 'Sales Analysis Measure':'COGS']=N:
+    (1-DB('Sales Analysis'
+            , 'Actual'
+            , DB('}ElementAttributes_Year',!Year,'Prev Year')
+            , 'All Months'
+            , !Currency
+            , !Entity
+            , !'Business Unit'
+            , 'DEM Distribution Centre':'All Distribution Centres'
+            , 'Market Location':'All Market Locations'
+            , 'DEM Customer':'Total Customers'
+            , 'Sales Person':'All Sales Person'
+            , DB('}ElementAttributes_Product',!'Product','Product Code')
+            , 'Sales Type':'Total Sales Type'
+            ,'Sales Analysis Measure':'Margin @ Cost (%)'))*
+      ['Sales Analysis Measure':'Gross Sales'];
+ 
+ 
+# LY Actual
+  ['LY Actual']=C:
+  DB('Sales Analysis', 'Actual', DB('}ElementAttributes_Year', !'Year', 'Prev Year' ), !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' );
+
+# CK 06-05-2024
+# LY Actual Inc Forecast
+  ['LY Actual Inc Forecast']=C:
+  DB('Sales Analysis', 'Actual Inc Forecast', DB('}ElementAttributes_Year', !'Year', 'Prev Year' ), !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' );
+
+
+# Actual Inc Budget
+['Actual Inc Budget']=N:
+    IF ( DB('Control', 'Working Forecast', !Year, !Month, 'String' ) @='A',
+      DB('Sales Analysis', 'Actual', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ),
+      DB('Sales Analysis', 'Budget', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' )      
+      );
+
+# Actual v LY Actual ($)
+['Actual v LY Actual ($)']=C:
+      DB('Sales Analysis', 'Actual', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ) - 
+      DB('Sales Analysis', 'LY Actual', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' );
+
+# Budget v LY Actual ($)
+['Budget v LY Actual ($)']=C:
+      DB('Sales Analysis', 'Budget', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ) - 
+      DB('Sales Analysis', 'LY Actual', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' );
+  
+# CK 06-05-2024
+# Budget v LY Actual Inc Forecast ($) 
+['Budget v LY Actual Inc Forecast ($)']=C:
+      DB('Sales Analysis', 'Budget', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ) - 
+      DB('Sales Analysis', 'LY Actual Inc Forecast', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' );
+
+# Actual v LY Actual (%)
+['Actual v LY Actual (%)']= 
+    (['Actual v LY Actual ($)'] \ ['LY Actual']);  
+
+# Budget v LY Actual (%)
+['Budget v LY Actual (%)']= 
+    (['Budget v LY Actual ($)'] \ ['LY Actual']);  
+    
+    
+ # CK 06-05-2024
+ # Budget v v LY Actual Inc Forecast (%)
+['Budget v LY Actual Inc Forecast (%)']= 
+    (['Budget v LY Actual Inc Forecast ($)'] \ ['LY Actual Inc Forecast']);  
+
+# Actual Inc Forecast
+['Actual Inc Forecast']=N:
+    IF ( DB('Control', 'Working Forecast', !Year, !Month, 'String' ) @='A',
+      DB('Sales Analysis', 'Actual', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' ),
+      DB('Sales Analysis', 'Forecast', !Year, !Month, !Currency, !Entity, !'Business Unit', !'DEM Distribution Centre', !'Market Location', !'DEM Customer', !'Sales Person', !Product, !'Sales Type', !'Sales Analysis Measure' )      
+      );
+
+FEEDERS;
+
+['Actual', 'EUR', 'Gross Sales']=>
+['Actual', 'AUD', 'Gross Sales'],
+['Actual', 'AUD', 'COGS']
+;
+
+['Budget', 'EUR', 'Gross Sales']=>
+['Budget', 'AUD', 'Gross Sales'],
+['Budget', 'AUD', 'COGS']
+;
+
+['Forecast', 'EUR', 'Gross Sales']=>
+['Forecast', 'AUD', 'Gross Sales'],
+['Forecast', 'AUD', 'COGS']
+;
+
+['Actual', 'NZD', 'Gross Sales']=>
+['Actual', 'AUD', 'Gross Sales'],
+['Actual', 'AUD', 'COGS']
+;
+
+['Budget', 'NZD', 'Gross Sales']=>
+['Budget', 'AUD', 'Gross Sales'],
+['Budget', 'AUD', 'COGS']
+;
+
+['Forecast', 'NZD', 'Gross Sales']=>
+['Forecast', 'AUD', 'Gross Sales'],
+['Forecast', 'AUD', 'COGS']
+;
+
+['Actual', 'USD', 'Gross Sales']=>
+['Actual', 'AUD', 'Gross Sales'],
+['Actual', 'AUD', 'COGS']
+;
+
+['Budget', 'USD', 'Gross Sales']=>
+['Budget', 'AUD', 'Gross Sales'],
+['Budget', 'AUD', 'COGS']
+;
+
+['Forecast', 'USD', 'Gross Sales']=>
+['Forecast', 'AUD', 'Gross Sales'],
+['Forecast', 'AUD', 'COGS']
+;
+
+['Actual', 'CAD', 'Gross Sales']=>
+['Actual', 'AUD', 'Gross Sales'],
+['Actual', 'AUD', 'COGS']
+;
+
+['Budget', 'CAD', 'Gross Sales']=>
+['Budget', 'AUD', 'Gross Sales'],
+['Budget', 'AUD', 'COGS']
+;
+
+['Forecast', 'CAD', 'Gross Sales']=>
+['Forecast', 'AUD', 'Gross Sales'],
+['Forecast', 'AUD', 'COGS']
+;
+
+['Actual', 'JPY', 'Gross Sales']=>
+['Actual', 'AUD', 'Gross Sales'],
+['Actual', 'AUD', 'COGS']
+;
+
+['Budget', 'JPY', 'Gross Sales']=>
+['Budget', 'AUD', 'Gross Sales'],
+['Budget', 'AUD', 'COGS']
+;
+
+['Forecast', 'JPY', 'Gross Sales']=>
+['Forecast', 'AUD', 'Gross Sales'],
+['Forecast', 'AUD', 'COGS']
+;
+
+['Actual', 'INR', 'Gross Sales']=>
+['Actual', 'AUD', 'Gross Sales'],
+['Actual', 'AUD', 'COGS']
+;
+
+['Budget', 'INR', 'Gross Sales']=>
+['Budget', 'AUD', 'Gross Sales'],
+['Budget', 'AUD', 'COGS']
+;
+
+['Forecast', 'INR', 'Gross Sales']=>
+['Forecast', 'AUD', 'Gross Sales'],
+['Forecast', 'AUD', 'COGS']
+;
+
+['Actual']=>
+['LY Actual'], ['Actual Inc Budget'],['Actual v LY Actual ($)'],['Actual v LY Actual (%)'], ['Forecast'];
+
+['Budget']=>
+['Actual Inc Budget'],
+['Budget v LY Actual ($)'],
+['Budget v LY Actual (%)'];
+
+['Forecast']=>
+['Actual Inc Forecast'];
+
+['Budget','Gross Sales']=>['Budget','COGS'];

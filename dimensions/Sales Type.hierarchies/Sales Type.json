@@ -1,0 +1,116 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Sales Type",
+	"ElementsSortType":"ByName",
+	"ComponentsSortType":"ByName",
+	"Elements":
+	[
+		{
+			"Name":"Consumable",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cylinder",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Exclude",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Intercompany",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rental",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sample",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Sales Type",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total Sales Type (All)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Warranty",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Sales Type",
+			"ComponentName":"Cylinder",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type",
+			"ComponentName":"Rental",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type",
+			"ComponentName":"Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type",
+			"ComponentName":"Warranty",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Consumable",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Cylinder",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Exclude",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Intercompany",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Rental",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Sample",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Sales Type (All)",
+			"ComponentName":"Warranty",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Sales Type.subsets/Default.json"
+	]
+}

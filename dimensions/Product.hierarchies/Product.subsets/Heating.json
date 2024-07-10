@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Heating",
+	"Alias":"Name",
+	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER(DRILLDOWNMEMBER({[Product].[Product].[HT]} , {[Product].[Product].[HT]}) , {[Product].[Product].[H90],[Product].[Product].[H9001]} , RECURSIVE)}"
+}

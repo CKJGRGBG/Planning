@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"BU Summary",
+	"Alias":"Name",
+	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Business Unit].[Business Unit].[All Business Units]} , {[Business Unit].[Business Unit].[All Business Units]} , RECURSIVE)}"
+}

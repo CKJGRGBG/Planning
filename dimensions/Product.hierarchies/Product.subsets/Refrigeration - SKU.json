@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Refrigeration - SKU",
+	"Alias":"Name",
+	"Expression":"TM1IGNORE_BADTUPLES {FILTER(TM1FILTERBYLEVEL(TM1SUBSETALL([Product].[Product]) , 0) , (LEFT([Product].[Product].CURRENTMEMBER.PROPERTIES(\"Category Code\") , 1) = \"R\"))}"
+}
