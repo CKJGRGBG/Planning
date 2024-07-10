@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Default",
-	"Alias":"Name",
-	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Sales Person].[Sales Person].[All Sales Person]} , {[Sales Person].[Sales Person].[All Sales Person]} , RECURSIVE)}"
-}

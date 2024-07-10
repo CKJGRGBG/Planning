@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Default",
-	"Alias":"MEMBER_NAME",
-	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT(DRILLDOWNMEMBER({[Sales Type].[Sales Type].[Total Sales Type]} , {[Sales Type].[Sales Type].[Total Sales Type]} , RECURSIVE) , {[Sales Type].[Sales Type].[Consumable],[Sales Type].[Sales Type].[Exclude],[Sales Type].[Sales Type].[Intercompany],[Sales Type].[Sales Type].[Sample],[Sales Type].[Sales Type].[Warranty]})}"
-}

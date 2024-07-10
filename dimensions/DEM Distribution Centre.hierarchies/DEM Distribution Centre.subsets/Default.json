@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Default",
-	"Alias":"Code and Description",
-	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[DEM Distribution Centre].[DEM Distribution Centre].[All Distribution Centres]} , {[DEM Distribution Centre].[DEM Distribution Centre].[All Distribution Centres]} , RECURSIVE)}"
-}

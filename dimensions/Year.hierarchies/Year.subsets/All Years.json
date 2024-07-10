@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"All Years",
-	"Alias":"MEMBER_NAME",
-	"Expression":"TM1IGNORE_BADTUPLES {[Year].[Year].MEMBERS}"
-}

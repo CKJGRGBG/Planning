@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Default",
-	"Alias":"Name",
-	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Market Location].[Market Location].[All Market Locations]} , {[Market Location].[Market Location].[All Market Locations],[Market Location].[Market Location].[Asia]} , RECURSIVE)}"
-}

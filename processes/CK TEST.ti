@@ -1,0 +1,26 @@
+#region Prolog
+
+nUTCDateFormatId = NewDateFormatter('en-AU', 'Australia/Sydney', 'serial', '', 'datetime');
+sDatePattern = 'yyyy-MM-dd';
+sMonthPattern = 'MMM';
+
+sTDate=FormatDate( Now(), sDatePattern, nUTCDateFormatId );
+
+sYDate=FormatDate( Now() - 1, sDatePattern, nUTCDateFormatId );
+sYMthNm=SUBST(FormatDate( Now()-1, sMonthPattern, nUTCDateFormatId ),1,3);
+sYMthNo=FormatDate( Now()-1, 'MM', nUTCDateFormatId);
+sYYear=FormatDate( Now()-1, 'YYYY', nUTCDateFormatId);
+sYYearNo = Year(sYDate)-1;
+
+
+sFullYear = 'JulAugSepOctNovDecJanFebMarAprMayJun';
+
+sProcess = GetProcessName();
+sCub = 'Sales Analysis';
+sView = sCub | sProcess | ' ClearCurrentPeriod';
+
+ASCIIOutput('ckdate.txt', sTDate, sYDate, sYMthNm ,sYMthNo,  sYYear, NumberToString(sYYearNo), sFullYear,  sView);
+
+# CubeClearData( 'Sales Analysis' );
+
+#endregion
