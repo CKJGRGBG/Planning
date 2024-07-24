@@ -1,0 +1,7 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"ExpandAbove":true,
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Account PnL].[Account PnL].[NET PROFIT]} , {[Account PnL].[Account PnL].[NET PROFIT],[Account PnL].[Account PnL].[NET PROFIT BEFORE TAX],[Account PnL].[Account PnL].[EBIT],[Account PnL].[Account PnL].[CONTRIBUTION],[Account PnL].[Account PnL].[GROSS MARGIN],[Account PnL].[Account PnL].[AVERAGE VARIABLE MARGIN]} , RECURSIVE)}"
+}

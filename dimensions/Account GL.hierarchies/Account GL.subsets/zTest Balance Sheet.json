@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"zTest Balance Sheet",
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT([Account GL].[Account GL].MEMBERS , {[Account GL].[Account GL].[NET PROFIT]})}"
+}
