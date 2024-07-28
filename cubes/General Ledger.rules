@@ -1,0 +1,12 @@
+SKIPCHECK;
+
+['Measure GL':{'GL Balance'}] = 
+  IF (   ELLEV('Month', !Month) > 0,   0,   
+  Continue) ;
+
+['Measure GL':{'GL Balance'}, 'Current Year Earnings']  =N: 
+  DB( 'General Ledger', !Version, !Year, !Month, !'Business Unit', !Entity, !Currency, !'Cost Centre', !'Expense Type', !'Account GL', !'Measure GL'  );
+
+feeders;
+
+  ['GL Movement'] => ['GL Balance'];

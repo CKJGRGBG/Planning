@@ -1,0 +1,17 @@
+{
+	"@type":"Subset",
+	"Name":"Load Years",
+	"Alias":"MEMBER_NAME",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Year')/Hierarchies('Year')/Elements('FY23')"
+		},
+		{
+			"@id":"Dimensions('Year')/Hierarchies('Year')/Elements('FY24')"
+		},
+		{
+			"@id":"Dimensions('Year')/Hierarchies('Year')/Elements('FY25')"
+		}
+	]
+}

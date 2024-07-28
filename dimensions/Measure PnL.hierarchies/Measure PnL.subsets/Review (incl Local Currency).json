@@ -1,0 +1,17 @@
+{
+	"@type":"Subset",
+	"Name":"Review (incl Local Currency)",
+	"Alias":"MEMBER_NAME",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Local Currency')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Mgmt Total')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Stat Total')"
+		}
+	]
+}

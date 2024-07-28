@@ -1,0 +1,819 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Month",
+	"Elements":
+	[
+		{
+			"Name":"All Months",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Sep",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Oct",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Nov",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dec",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feb",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mar",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Apr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"May",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Jun",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YTD",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Jul",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Aug",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Sep",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Oct",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Nov",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Dec",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Jan",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Feb",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Mar",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Apr",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD May",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD Jun",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total Quarters",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Q4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total Halfs",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"H1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"H2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Jul",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Aug",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"May",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Months",
+			"ComponentName":"Jun",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Jul",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Aug",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Sep",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Oct",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Nov",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Dec",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Jan",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Feb",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Mar",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Apr",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD May",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD",
+			"ComponentName":"YTD Jun",
+			"Weight":0
+		},
+		{
+			"ParentName":"YTD Jul",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Aug",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Aug",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Sep",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Sep",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Sep",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Oct",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Oct",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Oct",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Oct",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Nov",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Nov",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Nov",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Nov",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Nov",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Dec",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Dec",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Dec",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Dec",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Dec",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Dec",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jan",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Feb",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Mar",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Apr",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD May",
+			"ComponentName":"May",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"May",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD Jun",
+			"ComponentName":"Jun",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Quarters",
+			"ComponentName":"Q1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Quarters",
+			"ComponentName":"Q2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Quarters",
+			"ComponentName":"Q3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Quarters",
+			"ComponentName":"Q4",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q1",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q2",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q3",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4",
+			"ComponentName":"May",
+			"Weight":1
+		},
+		{
+			"ParentName":"Q4",
+			"ComponentName":"Jun",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Halfs",
+			"ComponentName":"H1",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Halfs",
+			"ComponentName":"H2",
+			"Weight":1
+		},
+		{
+			"ParentName":"H1",
+			"ComponentName":"Jul",
+			"Weight":1
+		},
+		{
+			"ParentName":"H1",
+			"ComponentName":"Aug",
+			"Weight":1
+		},
+		{
+			"ParentName":"H1",
+			"ComponentName":"Sep",
+			"Weight":1
+		},
+		{
+			"ParentName":"H1",
+			"ComponentName":"Oct",
+			"Weight":1
+		},
+		{
+			"ParentName":"H1",
+			"ComponentName":"Nov",
+			"Weight":1
+		},
+		{
+			"ParentName":"H1",
+			"ComponentName":"Dec",
+			"Weight":1
+		},
+		{
+			"ParentName":"H2",
+			"ComponentName":"Jan",
+			"Weight":1
+		},
+		{
+			"ParentName":"H2",
+			"ComponentName":"Feb",
+			"Weight":1
+		},
+		{
+			"ParentName":"H2",
+			"ComponentName":"Mar",
+			"Weight":1
+		},
+		{
+			"ParentName":"H2",
+			"ComponentName":"Apr",
+			"Weight":1
+		},
+		{
+			"ParentName":"H2",
+			"ComponentName":"May",
+			"Weight":1
+		},
+		{
+			"ParentName":"H2",
+			"ComponentName":"Jun",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Month.subsets/Actual Months.json",
+		"Month.subsets/All Months.json",
+		"Month.subsets/Budget.json",
+		"Month.subsets/Current Month.json",
+		"Month.subsets/Default.json",
+		"Month.subsets/Default - Expand Above.json",
+		"Month.subsets/Half.json",
+		"Month.subsets/Leaf Months.json",
+		"Month.subsets/Quarters.json",
+		"Month.subsets/YTD.json"
+	]
+}

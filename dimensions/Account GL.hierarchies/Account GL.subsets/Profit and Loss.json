@@ -1,0 +1,7 @@
+{
+	"@type":"Subset",
+	"Name":"Profit and Loss",
+	"ExpandAbove":true,
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Account GL].[Account GL].[NET PROFIT]} , {[Account GL].[Account GL].[NET PROFIT],[Account GL].[Account GL].[NET PROFIT BEFORE TAX],[Account GL].[Account GL].[EBIT],[Account GL].[Account GL].[CONTRIBUTION],[Account GL].[Account GL].[GROSS MARGIN],[Account GL].[Account GL].[AVERAGE VARIABLE MARGIN]} , RECURSIVE)}"
+}

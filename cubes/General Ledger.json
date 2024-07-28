@@ -1,0 +1,49 @@
+{
+	"@type":"Cube",
+	"Name":"General Ledger",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Year')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		},
+		{
+			"@id":"Dimensions('Business Unit')"
+		},
+		{
+			"@id":"Dimensions('Entity')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Cost Centre')"
+		},
+		{
+			"@id":"Dimensions('Expense Type')"
+		},
+		{
+			"@id":"Dimensions('Account GL')"
+		},
+		{
+			"@id":"Dimensions('Measure GL')"
+		}
+	],
+	"Rules@Code.link":"General Ledger.rules",
+	"MeasuresDimension":
+	{
+		"@id":"Dimensions('Measure GL')"
+	},
+	"Views@Code.links":
+	[
+		"General Ledger.views/zDefaultForTI.json",
+		"General Ledger.views/Default.json",
+		"General Ledger.views/GL cube Bal Sheet View.json",
+		"General Ledger.views/GL cube PnL View.json"
+	]
+}

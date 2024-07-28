@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Balance Sheet Reporting",
+	"Alias":"Num + Description",
+	"Expression":"TM1IGNORE_BADTUPLES {[Account BS].[Account BS].MEMBERS}"
+}

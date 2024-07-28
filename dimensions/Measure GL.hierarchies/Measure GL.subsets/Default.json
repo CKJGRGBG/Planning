@@ -1,0 +1,14 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"MEMBER_NAME",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Measure GL')/Hierarchies('Measure GL')/Elements('GL Balance')"
+		},
+		{
+			"@id":"Dimensions('Measure GL')/Hierarchies('Measure GL')/Elements('GL Movement')"
+		}
+	]
+}

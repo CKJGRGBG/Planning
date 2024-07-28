@@ -1,0 +1,110 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Business Unit",
+	"Elements":
+	[
+		{
+			"Name":"All Business Units",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PG",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RF",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CYL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"No Business Unit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SS Base",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SS Total",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"SS",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"SS",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"HT",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"PG",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"RF",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"AP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"CR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"CYL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Business Units",
+			"ComponentName":"SS Total",
+			"Weight":1
+		},
+		{
+			"ParentName":"SS Total",
+			"ComponentName":"SS Base",
+			"Weight":1
+		},
+		{
+			"ParentName":"SS Total",
+			"ComponentName":"No Business Unit",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Business Unit.subsets/Budget BU.json",
+		"Business Unit.subsets/BU Summary.json",
+		"Business Unit.subsets/Default.json"
+	]
+}

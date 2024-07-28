@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Budget Year",
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT([Year].[Year].MEMBERS , {[Year].[Year].[All Years],[Year].[Year].[FY17],[Year].[Year].[FY18],[Year].[Year].[FY19],[Year].[Year].[FY20],[Year].[Year].[FY21],[Year].[Year].[FY22],[Year].[Year].[FY23],[Year].[Year].[FY26]})}"
+}

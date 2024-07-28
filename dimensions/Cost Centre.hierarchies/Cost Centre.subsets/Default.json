@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Cost Centre].[Cost Centre].[All Cost Centres]} , {[Cost Centre].[Cost Centre].[All Cost Centres]} , RECURSIVE)}"
+}

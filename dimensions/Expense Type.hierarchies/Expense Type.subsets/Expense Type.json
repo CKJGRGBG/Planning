@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Expense Type",
+	"Expression":"TM1IGNORE_BADTUPLES {{[Expense Type].[Expense Type].Levels(0).MEMBERS}}"
+}

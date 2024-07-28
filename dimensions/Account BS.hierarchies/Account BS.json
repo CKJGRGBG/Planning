@@ -1,0 +1,1788 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Account BS",
+	"ElementsSortType":"ByName",
+	"ElementsSortSense":"Ascending",
+	"ComponentsSortType":"ByName",
+	"ComponentsSortSense":"Ascending",
+	"Elements":
+	[
+		{
+			"Name":"1110",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1120",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1130",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1150",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1301",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1302",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1305",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1306",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1307",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1308",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1310",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1311",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1312",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1315",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1316",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1317",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1320",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1321",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1322",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1323",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1324",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1429",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1430",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1431",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1432",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1433",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1540",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1545",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1550",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1555",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1560",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1561",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1570",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1580",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1643",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1644",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1645",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1646",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1650",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1660",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1661",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1670",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1671",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1680",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1681",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1701",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1713",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1714",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1801",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1802",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1805",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1806",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1821",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1822",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1823",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1824",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1825",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1826",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1827",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1828",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1829",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1830",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1831",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1832",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1833",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1834",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1835",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1836",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1837",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1838",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1839",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1840",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1901",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1902",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1910",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1920",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2030",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2040",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2041",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2042",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2045",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2050",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2051",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2055",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2056",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2057",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2060",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2061",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2062",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2065",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2070",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2071",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2072",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2074",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2075",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2080",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2085",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2090",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2091",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2092",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2093",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2094",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2095",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2096",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2190",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2191",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2192",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2193",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2196",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"2270",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3112",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3116",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3119",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3205",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3208",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3210",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3211",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3213",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3214",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3220",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3240",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3245",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3246",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3247",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3250",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3305",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3310",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3315",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3320",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3321",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3330",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3340",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3345",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3350",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3365",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3366",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3367",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3510",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3511",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3512",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3515",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3516",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3517",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3518",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3521",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3522",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3523",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3524",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3544",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3545",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3546",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3547",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3550",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"3790",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4150",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4170",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4320",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4326",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4328",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4330",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4333",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4334",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"4555",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"7095",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"8920",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"9020",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Balance Sheet",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash on hand",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Current Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Current Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Current Year Earnings",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Deferred Tax Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Dividend Paid",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Employee Entitlements",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FCTR",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Fixed Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Intercompany",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Inventory",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Issued Capital",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Lease Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Lease Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Loans To Bank",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Loans To Shareholders",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Non-Current Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Non-Current Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Other Current Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Other Current Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Owners Equity",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Owners Equity (Total)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Provisions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Retained Earnings",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Trade Payables",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Trade Receivables",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Assets",
+			"ComponentName":"Current Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Assets",
+			"ComponentName":"Non-Current Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Sheet",
+			"ComponentName":"Net Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Balance Sheet",
+			"ComponentName":"Owners Equity (Total)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1301",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1302",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1305",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1306",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1307",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1308",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1310",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1311",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1312",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1315",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1316",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1317",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1320",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1321",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1322",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1323",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash on hand",
+			"ComponentName":"1324",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Assets",
+			"ComponentName":"Cash on hand",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Assets",
+			"ComponentName":"Inventory",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Assets",
+			"ComponentName":"Other Current Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Assets",
+			"ComponentName":"Trade Receivables",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Liabilities",
+			"ComponentName":"Loans To Bank",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Liabilities",
+			"ComponentName":"Other Current Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Liabilities",
+			"ComponentName":"Provisions",
+			"Weight":1
+		},
+		{
+			"ParentName":"Current Liabilities",
+			"ComponentName":"Trade Payables",
+			"Weight":1
+		},
+		{
+			"ParentName":"Deferred Tax Assets",
+			"ComponentName":"2270",
+			"Weight":1
+		},
+		{
+			"ParentName":"Dividend Paid",
+			"ComponentName":"1680",
+			"Weight":1
+		},
+		{
+			"ParentName":"Dividend Paid",
+			"ComponentName":"7095",
+			"Weight":1
+		},
+		{
+			"ParentName":"Dividend Paid",
+			"ComponentName":"8920",
+			"Weight":1
+		},
+		{
+			"ParentName":"Employee Entitlements",
+			"ComponentName":"4170",
+			"Weight":1
+		},
+		{
+			"ParentName":"FCTR",
+			"ComponentName":"1150",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1701",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1713",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1714",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1801",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1802",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1805",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1806",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1821",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1822",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1823",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1824",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1825",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1826",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1827",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1828",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1829",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1830",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1831",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1832",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1833",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1834",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1835",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1836",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1837",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1838",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1839",
+			"Weight":1
+		},
+		{
+			"ParentName":"Fixed Assets",
+			"ComponentName":"1840",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"1431",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2030",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2040",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2041",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2042",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2045",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2050",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2051",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2055",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2056",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2057",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2060",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2061",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2062",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2065",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2070",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2071",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2072",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2074",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2075",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2080",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2085",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2090",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2091",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2092",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2093",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2094",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2095",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2096",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"3211",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1540",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1545",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1550",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1555",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1560",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1561",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1570",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1580",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1910",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"1920",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inventory",
+			"ComponentName":"3367",
+			"Weight":1
+		},
+		{
+			"ParentName":"Issued Capital",
+			"ComponentName":"1110",
+			"Weight":1
+		},
+		{
+			"ParentName":"Lease Assets",
+			"ComponentName":"1901",
+			"Weight":1
+		},
+		{
+			"ParentName":"Lease Assets",
+			"ComponentName":"1902",
+			"Weight":1
+		},
+		{
+			"ParentName":"Lease Liabilities",
+			"ComponentName":"3547",
+			"Weight":1
+		},
+		{
+			"ParentName":"Lease Liabilities",
+			"ComponentName":"4555",
+			"Weight":1
+		},
+		{
+			"ParentName":"Liabilities",
+			"ComponentName":"Current Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Liabilities",
+			"ComponentName":"Non-Current Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3112",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3116",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3119",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3213",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3245",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3246",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"3247",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Bank",
+			"ComponentName":"4320",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Shareholders",
+			"ComponentName":"4326",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Shareholders",
+			"ComponentName":"4328",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Shareholders",
+			"ComponentName":"4330",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Shareholders",
+			"ComponentName":"4333",
+			"Weight":1
+		},
+		{
+			"ParentName":"Loans To Shareholders",
+			"ComponentName":"4334",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Assets",
+			"ComponentName":"Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Assets",
+			"ComponentName":"Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non-Current Assets",
+			"ComponentName":"Deferred Tax Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non-Current Assets",
+			"ComponentName":"Fixed Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non-Current Assets",
+			"ComponentName":"Lease Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non-Current Liabilities",
+			"ComponentName":"Employee Entitlements",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non-Current Liabilities",
+			"ComponentName":"Lease Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non-Current Liabilities",
+			"ComponentName":"Loans To Shareholders",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"1643",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"1644",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"1645",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"1646",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"1650",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"1660",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"2190",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"2191",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"2192",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"2193",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"2196",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Assets",
+			"ComponentName":"Intercompany",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"1670",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"1671",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"1681",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3205",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3208",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3220",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3240",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3250",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3315",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3510",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3511",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3512",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3515",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3516",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3517",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3518",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3521",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3522",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3523",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3524",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3546",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3550",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Current Liabilities",
+			"ComponentName":"3790",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity",
+			"ComponentName":"Current Year Earnings",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity",
+			"ComponentName":"Dividend Paid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity",
+			"ComponentName":"FCTR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity",
+			"ComponentName":"Issued Capital",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity",
+			"ComponentName":"Retained Earnings",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity (Total)",
+			"ComponentName":"Owners Equity",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3305",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3310",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3320",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3321",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3330",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3340",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3345",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3350",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"3365",
+			"Weight":1
+		},
+		{
+			"ParentName":"Provisions",
+			"ComponentName":"4150",
+			"Weight":1
+		},
+		{
+			"ParentName":"Retained Earnings",
+			"ComponentName":"1120",
+			"Weight":1
+		},
+		{
+			"ParentName":"Retained Earnings",
+			"ComponentName":"1130",
+			"Weight":1
+		},
+		{
+			"ParentName":"Retained Earnings",
+			"ComponentName":"9020",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Payables",
+			"ComponentName":"1661",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Payables",
+			"ComponentName":"3210",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Payables",
+			"ComponentName":"3214",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"1429",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"1430",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"1432",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"1433",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"3366",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"3544",
+			"Weight":1
+		},
+		{
+			"ParentName":"Trade Receivables",
+			"ComponentName":"3545",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Account BS.subsets/Balance Sheet Reporting.json",
+		"Account BS.subsets/Default.json",
+		"Account BS.subsets/Summary.json"
+	]
+}

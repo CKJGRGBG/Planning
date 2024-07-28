@@ -1,0 +1,70 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Measure PnL",
+	"Elements":
+	[
+		{
+			"Name":"Mgmt Base",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mgmt Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mgmt Total",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Stat Base",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Stat Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Stat Total",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Local Currency",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Percentage",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Mgmt Total",
+			"ComponentName":"Mgmt Base",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mgmt Total",
+			"ComponentName":"Mgmt Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Stat Total",
+			"ComponentName":"Stat Base",
+			"Weight":1
+		},
+		{
+			"ParentName":"Stat Total",
+			"ComponentName":"Stat Adj",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Measure PnL.subsets/Default.json",
+		"Measure PnL.subsets/Mgmt Reporting.json",
+		"Measure PnL.subsets/Review (incl Local Currency).json",
+		"Measure PnL.subsets/Stat Reporting.json",
+		"Measure PnL.subsets/Temp.json"
+	]
+}

@@ -1,0 +1,95 @@
+SKIPCHECK;
+
+# CPM Gross Margin %
+ ['GROSS MARGIN %']=
+   ['Account PnL':'Account PnL':'GROSS MARGIN'] \ ['Account PnL':'Account PnL':'TOTAL SALES'];
+
+# CPM Average Variable Margin %
+ ['AVERAGE VARIABLE MARGIN %']=
+   ['Account PnL':'Account PnL':'AVERAGE VARIABLE MARGIN'] \ ['Account PnL':'Account PnL':'TOTAL SALES'];
+
+# CPM report local currency of the entity in their local currency
+[Version:{'Actual','Budget','Forecast'},{'Mgmt Base', 'Mgmt Adj', 'Stat Base', 'Stat Adj'}]=N:
+  IF ( !Currency @= AttrS ('Entity',!Entity,'Local Currency'),
+   ['Local'],
+    CONTINUE
+    );
+
+# CPM  convert to AUD based off Plan rate in the FX cube
+# CPM 23/07/2024 - Refer to attribute of version for relevant lookup
+['AUD', Version:{'Actual','Budget','Forecast'},{'Mgmt Base', 'Mgmt Adj'}]=N:
+  IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'),
+    ['Local'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Plan' ),
+    ['Local']);
+
+# CPM  convert to AUD based off Average rate in the FX cube
+# CPM 23/07/2024 - Refer to attribute of version for relevant lookup
+['AUD', Version:{'Actual','Budget','Forecast'},{'Stat Base', 'Stat Adj'}]=N:
+  IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'),
+    ['Local'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Average' ),
+    ['Local']);    
+
+# CPM  Actual inc Forecast
+[Version:{'Actual inc Forecast'}]=N:
+    IF ( DB('Control', 'Working Forecast', !Year, !Month, 'String' ) @='A',
+        DB('Profit and Loss', 'Actual', !Year, !Month, !'Business Unit', !Entity, !Currency, !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' ),
+        DB('Profit and Loss', 'Forecast', !Year, !Month, !'Business Unit', !Entity, !Currency, !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' )      
+      );
+
+# CPM  Actual inc Budget
+[Version:{'Actual inc Budget'}]=N:
+    IF ( DB('Control', 'Working Forecast', !Year, !Month, 'String' ) @='A',
+        DB('Profit and Loss', 'Actual', !Year, !Month, !'Business Unit', !Entity, !Currency, !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' ),
+        DB('Profit and Loss', 'Budget', !Year, !Month, !'Business Unit', !Entity, !Currency, !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' )      
+      );
+
+[Version:{'Working Budget','Working Forecast'},'Measure PnL':{'Mgmt Base','Mgmt Adj'},Entity:{'AMBR','AMBR IND','BRNZ','HTCA','HTEU','HTJP','HTUS','HTIN'},Currency:'AUD']=N:
+IF(DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, ATTRS( 'Entity', !Entity, 'Local Currency' ), !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' )=0,
+  CONTINUE,
+  DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, ATTRS( 'Entity', !Entity, 'Local Currency' ), !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' )\DB( 'FX Rates', !Version, !Year,!Month,ATTRS( 'Entity', !Entity, 'Local Currency' ),'Plan'));
+#[Version:'Draft Budget','Measure PnL':{'Mgmt Base','Mgmt Adj'},Entity:{'AMBR','AMBR IND','BRNZ','HTCA','HTEU','HTJP','HTUS','HTIN'},Currency:'AUD']=N:DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, ATTRS( 'Entity', !Entity, 'Local Currency' ), !'Cost Centre', !'Expense Type', !'Account PnL', !'Measure PnL' )\DB( 'FX Rates', !Version, !Year,!Month,ATTRS( 'Entity', !Entity, 'Local Currency' ),'Spot');
+
+[Version:{'Working Budget','Working Forecast'},'Account PnL':{'6510','6512'},'Measure PnL':'Mgmt Base']=N:
+IF (['Percentage']=0,CONTINUE,['Account PnL':'Account PnL':'TOTAL SALES', 'Measure PnL':'Mgmt Base']-(['Measure PnL':'Percentage']*['Account PnL':'Account PnL':'6130', 'Measure PnL':'Mgmt Base']));
+
+FEEDERS;
+    ['Percentage']=>['Mgmt Base'];
+['USD']=>['AUD'];
+['NZD']=>['AUD'];
+['EUR']=>['AUD'];
+['CAD']=>['AUD'];
+['INR']=>['AUD'];
+['JPY']=>['AUD'];
+
+# CPM 
+['Local']=> 
+      DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Cost Centre', !'Expense Type', !'Account PnL', 'Mgmt Base' ),
+      DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Cost Centre', !'Expense Type', !'Account PnL', 'Mgmt Adj' ),
+      DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Cost Centre', !'Expense Type', !'Account PnL', 'Stat Base' ),
+      DB('Profit and Loss', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Cost Centre', !'Expense Type', !'Account PnL', 'Stat Adj' );
+
+# CPM 
+[ 'Actual', 'Account PnL':'Account PnL':'NET PROFIT']=>
+      DB('General Ledger', !Version, !Year, !Month, !'Business Unit', !Entity, !Currency, !'Cost Centre', !'Expense Type', 'Current Year Earnings (Calc)', 'GL Movement' ),
+      DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, !Currency, 'Current Year Earnings', 'Mgmt Base' ),
+      DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, !Currency, 'Current Year Earnings', 'Stat Base' );
+
+# CPM 
+['Actual']=>
+      ['Actual Inc Forecast'],
+      ['Actual Inc Budget'];      
+
+# CPM 
+['Forecast']=>
+      ['Actual Inc Forecast'];
+
+# CPM 
+['Budget']=>
+      ['Actual Inc Budget'];      
+
+# CPM 
+['Total Sales']=>
+  ['GROSS MARGIN %'],
+  ['AVERAGE VARIABLE MARGIN %']  ;

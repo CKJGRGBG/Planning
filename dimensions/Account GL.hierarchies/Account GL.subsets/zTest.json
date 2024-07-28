@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zTest",
+	"Expression":"EXCEPT(                        \tDESCENDANTS([Account GL].[Account GL].[Balance Sheet] , 99 , LEAVES),                        \tDESCENDANTS([Account GL].[Account GL].[Current Year Earnings])                            )"
+}

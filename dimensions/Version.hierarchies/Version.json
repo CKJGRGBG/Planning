@@ -1,0 +1,126 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Version",
+	"Elements":
+	[
+		{
+			"Name":"Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Draft Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Working Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Working Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Jul",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Aug",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Sep",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Oct",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Nov",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Dec",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Jan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Feb",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Mar",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Apr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_May",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fcst_Jun",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LY Actual",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LY Actual Inc Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Actual Inc Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Actual v LY Actual ($)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Actual",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Actual v LY Actual (%)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Actual Inc Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget v LY Actual ($)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget v LY Actual (%)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget v LY Actual Inc Forecast ($)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget v LY Actual Inc Forecast (%)",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Version.subsets/Act Bud Var$ Var%.json",
+		"Version.subsets/Budget & Actual.json",
+		"Version.subsets/Budgeting.json",
+		"Version.subsets/Default.json"
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"MEMBER_NAME",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Mgmt Total')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Mgmt Base')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Mgmt Adj')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Stat Total')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Stat Base')"
+		},
+		{
+			"@id":"Dimensions('Measure PnL')/Hierarchies('Measure PnL')/Elements('Stat Adj')"
+		}
+	]
+}

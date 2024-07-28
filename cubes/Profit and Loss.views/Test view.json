@@ -1,0 +1,51 @@
+{
+	"@type":"MDXView",
+	"Name":"Test view",
+	"MDX@Code.link":"Test view.mdx",
+	"Meta": {
+		"Aliases": {
+			"[Month].[Month]": "MEMBER_NAME",
+			"[Year].[Year]": "MEMBER_NAME",
+			"[Measure PnL].[Measure PnL]": "MEMBER_NAME",
+			"[Version].[Version]": "MEMBER_NAME",
+			"[Account PnL].[Account PnL]": "MEMBER_NAME"
+		},
+		"ExpandAboves": {
+			"[Entity].[Entity]": false,
+			"[Cost Centre].[Cost Centre]": false,
+			"[Month].[Month]": false,
+			"[Year].[Year]": false,
+			"[Expense Type].[Expense Type]": false,
+			"[Business Unit].[Business Unit]": false,
+			"[Measure PnL].[Measure PnL]": false,
+			"[Currency].[Currency]": false,
+			"[Version].[Version]": false,
+			"[Account PnL].[Account PnL]": false
+		},
+		"ContextSets": {
+			"[Entity].[Entity]": {
+				"Expression": "{[Entity].[Entity].MEMBERS}"
+			},
+			"[Cost Centre].[Cost Centre]": {
+				"Expression": "{[Cost Centre].[Cost Centre].MEMBERS}"
+			},
+			"[Year].[Year]": {
+				"SubsetName": "Default",
+				"IsPublic": true
+			},
+			"[Expense Type].[Expense Type]": {
+				"Expression": "{[Expense Type].[Expense Type].MEMBERS}"
+			},
+			"[Business Unit].[Business Unit]": {
+				"Expression": "{[Business Unit].[Business Unit].MEMBERS}"
+			},
+			"[Measure PnL].[Measure PnL]": {
+				"SubsetName": "Mgmt Reporting",
+				"IsPublic": true
+			},
+			"[Currency].[Currency]": {
+				"Expression": "{[Currency].[Currency].MEMBERS}"
+			}
+		}
+	}
+}

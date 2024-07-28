@@ -1,0 +1,148 @@
+{
+	"@type":"NativeView",
+	"Name":"zDefaultForTI",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Measure GL')/Hierarchies('Measure GL')"
+				},
+				"Expression":"TM1SubsetAll([Measure GL])"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Account GL')/Hierarchies('Account GL')"
+				},
+				"Expression":"TM1SubsetAll([Account GL])"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Expression":"TM1SubsetAll([Version])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actual')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Year')/Hierarchies('Year')"
+				},
+				"Expression":"TM1SubsetAll([Year])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Year')/Hierarchies('Year')/Elements('FY17')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Month')/Hierarchies('Month')"
+				},
+				"Expression":"TM1SubsetAll([Month])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('All Months')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Business Unit')/Hierarchies('Business Unit')"
+				},
+				"Expression":"TM1SubsetAll([Business Unit])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Business Unit')/Hierarchies('Business Unit')/Elements('All Business Units')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Entity')/Hierarchies('Entity')"
+				},
+				"Expression":"TM1SubsetAll([Entity])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Entity')/Hierarchies('Entity')/Elements('AMBR')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency')/Hierarchies('Currency')"
+				},
+				"Expression":"TM1SubsetAll([Currency])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('AUD')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Cost Centre')/Hierarchies('Cost Centre')"
+				},
+				"Expression":"TM1SubsetAll([Cost Centre])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Cost Centre')/Hierarchies('Cost Centre')/Elements('All Cost Centres')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Expense Type')/Hierarchies('Expense Type')"
+				},
+				"Expression":"TM1SubsetAll([Expense Type])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Expense Type')/Hierarchies('Expense Type')/Elements('Blank')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":""
+}

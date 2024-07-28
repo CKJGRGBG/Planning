@@ -1,0 +1,11 @@
+{
+	"@type":"Subset",
+	"Name":"Current Month",
+	"Alias":"MEMBER_NAME",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('Jun')"
+		}
+	]
+}
