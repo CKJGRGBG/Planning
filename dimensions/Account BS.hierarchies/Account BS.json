@@ -20,6 +20,10 @@
 			"Type":"Numeric"
 		},
 		{
+			"Name":"1150",
+			"Type":"Numeric"
+		},
+		{
 			"Name":"1301",
 			"Type":"Numeric"
 		},
@@ -708,7 +712,15 @@
 			"Type":"Consolidated"
 		},
 		{
+			"Name":"FCTR",
+			"Type":"Consolidated"
+		},
+		{
 			"Name":"Fixed Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Intercompany",
 			"Type":"Consolidated"
 		},
 		{
@@ -957,6 +969,11 @@
 			"Weight":1
 		},
 		{
+			"ParentName":"FCTR",
+			"ComponentName":"1150",
+			"Weight":1
+		},
+		{
 			"ParentName":"Fixed Assets",
 			"ComponentName":"1701",
 			"Weight":1
@@ -1089,6 +1106,161 @@
 		{
 			"ParentName":"Fixed Assets",
 			"ComponentName":"1840",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"1431",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2030",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2040",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2041",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2042",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2045",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2050",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2051",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2055",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2056",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2057",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2060",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2061",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2062",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2065",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2070",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2071",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2072",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2074",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2075",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2080",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2085",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2090",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2091",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2092",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2093",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2094",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2095",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"2096",
+			"Weight":1
+		},
+		{
+			"ParentName":"Intercompany",
+			"ComponentName":"3211",
 			"Weight":1
 		},
 		{
@@ -1288,11 +1460,6 @@
 		},
 		{
 			"ParentName":"Other Current Assets",
-			"ComponentName":"1431",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
 			"ComponentName":"1643",
 			"Weight":1
 		},
@@ -1323,151 +1490,6 @@
 		},
 		{
 			"ParentName":"Other Current Assets",
-			"ComponentName":"2010",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2030",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2040",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2041",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2042",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2045",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2050",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2051",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2055",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2056",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2057",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2060",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2061",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2062",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2065",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2070",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2071",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2072",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2074",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2075",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2080",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2085",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2090",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2091",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2092",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2093",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2094",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2095",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
-			"ComponentName":"2096",
-			"Weight":1
-		},
-		{
-			"ParentName":"Other Current Assets",
 			"ComponentName":"2190",
 			"Weight":1
 		},
@@ -1493,7 +1515,7 @@
 		},
 		{
 			"ParentName":"Other Current Assets",
-			"ComponentName":"3211",
+			"ComponentName":"Intercompany",
 			"Weight":1
 		},
 		{
@@ -1619,6 +1641,11 @@
 		{
 			"ParentName":"Owners Equity",
 			"ComponentName":"Dividend Paid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Owners Equity",
+			"ComponentName":"FCTR",
 			"Weight":1
 		},
 		{
@@ -1754,6 +1781,7 @@
 	],
 	"Subsets@Code.links":
 	[
+		"Account BS.subsets/Balance Sheet Reporting.json",
 		"Account BS.subsets/Default.json",
 		"Account BS.subsets/Summary.json"
 	]

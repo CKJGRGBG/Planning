@@ -1,0 +1,46 @@
+{
+	"@type":"Process",
+	"Name":"CK TEST Accounts",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"CK TEST Accounts.ti",
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForServer":"BromicConnection",
+		"dataSourceNameForClient":"BromicConnection",
+		"userName":"bromicadmin",
+		"password":"RSTUSHr9S@Rg",
+		"query":"SELECT [No_]\t\t\tAS code\r\n\t, [Name]\t\t\tAS name\r\n\t, CASE WHEN [Income_Balance] = 1 THEN 'Balance Sheet' else 'Profit & Loss' END\tAS type\r\nFROM [NAV_PROD].dbo.[BRAU$G_L Account]\r\nWHERE [Account Type] = 0 "
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"code",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"name",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"type",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		}
+	],
+	"UIData": "_ParameterConstraints=e30=\f",
+	"VariablesUIData": [
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f"
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"@type":"Subset",
+	"Name":"Current Year",
+	"Alias":"MEMBER_NAME",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Year')/Hierarchies('Year')/Elements('FY24')"
+		}
+	]
+}

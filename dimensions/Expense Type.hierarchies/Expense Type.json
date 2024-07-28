@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Expense Type",
+	"Elements":
+	[
+		{
+			"Name":"Blank",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Expense Type.subsets/Default.json",
+		"Expense Type.subsets/Expense Type.json"
+	]
+}

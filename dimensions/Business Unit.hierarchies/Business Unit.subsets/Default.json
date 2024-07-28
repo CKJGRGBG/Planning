@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Alias":"Name",
+	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT(DRILLDOWNMEMBER({[Business Unit].[Business Unit].[All Business Units]} , {[Business Unit].[Business Unit].[All Business Units]} , RECURSIVE) , {[Business Unit].[Business Unit].[SS Total]})}"
+}

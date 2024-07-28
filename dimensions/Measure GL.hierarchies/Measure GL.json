@@ -1,0 +1,73 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Measure GL",
+	"Elements":
+	[
+		{
+			"Name":"Total",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GL Balance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Manual TB Variance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Manual NAV TB",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GL Movement",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GL",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total",
+			"ComponentName":"Value",
+			"Weight":1
+		},
+		{
+			"ParentName":"Manual TB Variance",
+			"ComponentName":"Manual NAV TB",
+			"Weight":1
+		},
+		{
+			"ParentName":"GL",
+			"ComponentName":"GL Balance",
+			"Weight":1
+		},
+		{
+			"ParentName":"GL",
+			"ComponentName":"GL Movement",
+			"Weight":1
+		},
+		{
+			"ParentName":"GL",
+			"ComponentName":"Adj",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Measure GL.subsets/Default.json",
+		"Measure GL.subsets/GL Measure.json",
+		"Measure GL.subsets/TB Manual Rec.json"
+	]
+}

@@ -1,0 +1,6 @@
+{
+	"@type":"Subset",
+	"Name":"Budget & Actual",
+	"Alias":"MEMBER_NAME",
+	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT([Version].[Version].MEMBERS , {[Version].[Version].[Forecast],[Version].[Version].[Draft Budget],[Version].[Version].[Working Budget],[Version].[Version].[Working Forecast],[Version].[Version].[Fcst_Jul],[Version].[Version].[Fcst_Aug],[Version].[Version].[Fcst_Sep],[Version].[Version].[Fcst_Oct],[Version].[Version].[Fcst_Nov],[Version].[Version].[Fcst_Dec],[Version].[Version].[Fcst_Jan],[Version].[Version].[Fcst_Feb],[Version].[Version].[Fcst_Mar],[Version].[Version].[Fcst_Apr],[Version].[Version].[Fcst_May],[Version].[Version].[Fcst_Jun],[Version].[Version].[LY Actual],[Version].[Version].[LY Actual Inc Forecast],[Version].[Version].[Actual Inc Budget],[Version].[Version].[Actual v LY Actual ($)],[Version].[Version].[Actual v LY Actual (%)],[Version].[Version].[Actual Inc Forecast],[Version].[Version].[Budget v LY Actual ($)],[Version].[Version].[Budget v LY Actual (%)]})}"
+}

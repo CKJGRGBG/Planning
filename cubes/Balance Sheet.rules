@@ -1,0 +1,93 @@
+SKIPCHECK;
+
+# CPM report local currency of the entity in their local currency
+[ 'Actual', 'Current Year Earnings', 'Local' ]=N:
+    DB('Profit and Loss', !Version, !Year, 'YTD' | !Month, !'Business Unit', !Entity, 'Local', 'All Cost Centres', 'Blank', 'NET PROFIT', !Measure BS) *-1;
+
+#CPM 23/07/2024 Conversion of Current Year Earnings in Stat Base and Stat Adj to use avg
+['AUD', 'Current Year Earnings', Version:{'Actual','Budget','Forecast'},{'Stat Base', 'Stat Adj'}]=N:
+  IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'),
+    ['Local'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Average' ),
+    ['Local']);    
+
+#CPM 23/07/2024 - FCTR calculation
+ ['AUD', '1150', Version:{'Actual','Budget','Forecast'},{'Stat Base', 'Stat Adj'}]=N:
+    IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'), 
+   (['Local', 'Current Year Earnings'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Spot' ) ) -
+   (['Local', 'Current Year Earnings'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Average' ) ),    
+     STET);
+
+              # #CPM 23/07/2024 - FCTR calculation
+              #  ['AUD', '1150', Version:{'Actual','Budget','Forecast'},{'Stat Base', 'Stat Adj'}]=N:
+              #     IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'), 
+              #     (['Net Assets'] + 
+              #     ['Current Year Earnings'] + 
+              #     ['Dividend Paid'] +    
+              #     ['Issued Capital'] +
+              #     ['Retained Earnings'])*-1,   
+              #      STET);
+
+# CPM report local currency of the entity in their local currency
+[Version:{'Actual','Budget','Forecast'},{'Mgmt Base', 'Mgmt Adj', 'Stat Base', 'Stat Adj'}]=N:
+  IF ( !Currency @= AttrS ('Entity',!Entity,'Local Currency'),
+   ['Local'],
+    CONTINUE
+    );
+
+# CPM convert to AUD based off Plan rate in the FX cube
+# CPM 23/07/2024 - Refer to attribute of version for relevant lookup
+['AUD', Version:{'Actual','Budget','Forecast'},{'Mgmt Base', 'Mgmt Adj'}]=N:
+  IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'),
+    ['Local'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Plan' ),
+    ['Local']);
+
+# CPM convert to AUD based off Average rate in the FX cube
+#CPM 23/07/2024 - changed to Spot per business requirements
+# CPM 23/07/2024 - Refer to attribute of version for relevant lookup
+['AUD', Version:{'Actual','Budget','Forecast'},{'Stat Base', 'Stat Adj'}]=N:
+  IF ( !Currency @<> AttrS ('Entity',!Entity,'Local Currency'),
+    ['Local'] \ 
+    DB('FX Rates', AttrS('Version',!Version,'Currency Version'), !Year, !Month, AttrS ('Entity',!Entity,'Local Currency'), 'Spot' ),
+    ['Local']);    
+
+#Region Octane rules
+['.']=s:'';
+
+#To no show FY values
+['Measure BS':{'Stat Total', 'Stat Base','Stat Adj','Mgmt Total', 'Mgmt Base', 'Mgmt Adj', 'Local Currency'}] = 
+  IF( ELLEV('Month', !Month) > 0,   
+    0,   
+    Continue) ;
+
+# ['Current Year Earnings', {'Stat Base', 'Local Currency'}, 'Actual', 'FY24'] = N: 
+#     DB('Profit and Loss', !Version, !Year, 'YTD' | !Month, !'Business Unit', !Entity, !Currency, 'All Cost Centres', 'Null', 'NET PROFIT', !Measure BS);
+#EndRegion  
+feeders;
+
+# CPM 
+['USD']=>['AUD'];
+['NZD']=>['AUD'];
+['EUR']=>['AUD'];
+['CAD']=>['AUD'];
+['INR']=>['AUD'];
+['JPY']=>['AUD'];
+
+['Local']=> 
+DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Account BS', 'Mgmt Base' ),
+DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Account BS', 'Mgmt Adj' ),
+DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Account BS', 'Stat Base' ),
+DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), !'Account BS', 'Stat Adj' );
+
+[ 'Local', 'Current Year Earnings'] =>
+DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), '1150', 'Stat Base' ),
+DB('Balance Sheet', !Version, !Year, !Month, !'Business Unit', !Entity, AttrS('Entity', !Entity, 'Local Currency'), '1150', 'Stat Adj' );
+
+['Current Year Earnings']=>
+ ['1150']; 
+  
+
+    ['1680', 'All Business Units'] => ['Current Year Earnings', 'All Business Units']; 
