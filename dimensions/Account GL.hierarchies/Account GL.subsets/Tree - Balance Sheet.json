@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Tree - Balance Sheet",
-	"Alias":"Num + Description",
-	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER({[Account GL].[Account GL].[Balance Sheet]} , {[Account GL].[Account GL].[Balance Sheet],[Account GL].[Account GL].[Net Assets],[Account GL].[Account GL].[Owners Equity (Total)],[Account GL].[Account GL].[Owners Equity],[Account GL].[Account GL].[Assets],[Account GL].[Account GL].[Liabilities],[Account GL].[Account GL].[Cash on hand]} , RECURSIVE)}"
-}

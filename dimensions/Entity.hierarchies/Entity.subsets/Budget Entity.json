@@ -1,6 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Budget Entity",
-	"Alias":"MEMBER_NAME",
-	"Expression":"TM1IGNORE_BADTUPLES {EXCEPT([Entity].[Entity].MEMBERS , {[Entity].[Entity].[BPS Holdings],[Entity].[Entity].[No Entity],[Entity].[Entity].[All Entities]})}"
-}

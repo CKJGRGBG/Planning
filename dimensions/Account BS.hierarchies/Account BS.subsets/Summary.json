@@ -1,7 +1,0 @@
-{
-	"@type":"Subset",
-	"Name":"Summary",
-	"ExpandAbove":true,
-	"Alias":"Num + Description",
-	"Expression":"TM1IGNORE_BADTUPLES {DRILLDOWNMEMBER(DRILLDOWNMEMBER({[Account BS].[Account BS].[Balance Sheet]} , {[Account BS].[Account BS].[Balance Sheet],[Account BS].[Account BS].[Net Assets],[Account BS].[Account BS].[Assets],[Account BS].[Account BS].[Liabilities],[Account BS].[Account BS].[Owners Equity (Total)],[Account BS].[Account BS].[Owners Equity]} , RECURSIVE) , {[Account BS].[Account BS].[Current Assets],[Account BS].[Account BS].[Cash on hand]} , RECURSIVE)}"
-}
