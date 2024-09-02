@@ -1,0 +1,69 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Rebate Measure",
+	"Elements":
+	[
+		{
+			"Name":"Total Rebate",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Custumer",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Buyers Group",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Marketing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Settlement",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LTI",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Rebate",
+			"ComponentName":"Custumer",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rebate",
+			"ComponentName":"Buyers Group",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rebate",
+			"ComponentName":"Marketing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rebate",
+			"ComponentName":"Settlement",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rebate",
+			"ComponentName":"New Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Rebate",
+			"ComponentName":"LTI",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

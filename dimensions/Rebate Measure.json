@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"Rebate Measure",
+	"Hierarchies@Code.links":
+	[
+		"Rebate Measure.hierarchies/Rebate Measure.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Rebate Measure')/Hierarchies('Rebate Measure')"
+	}
+}
