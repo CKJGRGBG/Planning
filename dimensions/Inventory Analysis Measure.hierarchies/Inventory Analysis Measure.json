@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Inventory Analysis Measure",
+	"Elements":
+	[
+		{
+			"Name":"Quantity",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Stock Cost",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

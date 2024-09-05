@@ -1,0 +1,87 @@
+{
+	"@type":"Process",
+	"Name":"INV Cub Load Inventory Analysis - FULL",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"INV Cub Load Inventory Analysis - FULL.ti",
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForServer":"BromicConnection2",
+		"dataSourceNameForClient":"BromicConnection2",
+		"userName":"bromicadmin",
+		"password":"RSTUSHr9S@Rg",
+		"query":"SELECT [company_code]\r\n\t, [FinYear]\r\n\t, [Mth]\r\n\t, [item_no]\r\n\t, [currency_local]\r\n\t, [location_code]\r\n\t, [on_hand_quantity]\r\n\t, [on_hand_cost_local]\r\nFROM [BromicDW].[dbo].fact_inventory\r\nWHERE [inventory_date] > '2018-01-01'\r\n\tAND [on_hand_quantity] != 0"
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"entity_code",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"FinYear",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"Mth",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"item_no",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"currency_local",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"distribution_center",
+			"Type":"String",
+			"Position":6,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"on_hand_quantity",
+			"Type":"Numeric",
+			"Position":7,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"on_hand_cost_local",
+			"Type":"Numeric",
+			"Position":8,
+			"StartByte":0,
+			"EndByte":0
+		}
+	],
+	"UID": "1725515171000",
+	"UIData": "_ParameterConstraints=e30=\f",
+	"VariablesUIData": [
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f",
+		"VarType=33\fColType=827\f",
+		"VarType=33\fColType=827\f"
+	]
+}

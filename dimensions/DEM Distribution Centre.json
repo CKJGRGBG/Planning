@@ -1,0 +1,12 @@
+{
+	"@type":"Dimension",
+	"Name":"DEM Distribution Centre",
+	"Hierarchies@Code.links":
+	[
+		"DEM Distribution Centre.hierarchies/DEM Distribution Centre.json"
+	],
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('DEM Distribution Centre')/Hierarchies('DEM Distribution Centre')"
+	}
+}

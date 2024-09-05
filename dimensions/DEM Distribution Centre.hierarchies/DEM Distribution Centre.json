@@ -1,0 +1,433 @@
+{
+	"@type":"Hierarchy",
+	"Name":"DEM Distribution Centre",
+	"Elements":
+	[
+		{
+			"Name":"US-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NZ-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CA-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EU-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JP-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"IN-DRP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US-DRP-AMBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US-DRP-AMBR IND",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US-ALA-AMBR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US-ALA-AMBR IND",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-ADE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-BNE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-MEL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-PER",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-SYD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NZ-AKL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CA-DWS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EU-RTM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"US-CHINO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JP-TYO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"IN-GUR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fin Merch Plan Location",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU-THAI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Distribution Centres",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AMBR",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AMBR IND",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BRAU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BRNZ",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HTCA",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HTEU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HTUS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HTJP",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HTIN",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"All Distribution Centres by Company",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Unknown",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"US-ALA-AMBR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"US-DRP-AMBR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"US-ALA-AMBR IND",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"US-DRP-AMBR IND",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-ADE",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-BNE",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-MEL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-PER",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-SYD",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-THAI",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"AU-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"NZ-AKL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"NZ-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"CA-DWS",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"CA-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"EU-RTM",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"EU-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"US-CHINO",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"US-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"JP-TYO",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"JP-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"IN-GUR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres",
+			"ComponentName":"IN-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"AMBR",
+			"ComponentName":"US-ALA-AMBR",
+			"Weight":1
+		},
+		{
+			"ParentName":"AMBR",
+			"ComponentName":"US-DRP-AMBR",
+			"Weight":1
+		},
+		{
+			"ParentName":"AMBR IND",
+			"ComponentName":"US-ALA-AMBR IND",
+			"Weight":1
+		},
+		{
+			"ParentName":"AMBR IND",
+			"ComponentName":"US-DRP-AMBR IND",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-ADE",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-BNE",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-MEL",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-PER",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-SYD",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-THAI",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRAU",
+			"ComponentName":"AU-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRNZ",
+			"ComponentName":"NZ-AKL",
+			"Weight":1
+		},
+		{
+			"ParentName":"BRNZ",
+			"ComponentName":"NZ-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTCA",
+			"ComponentName":"CA-DWS",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTCA",
+			"ComponentName":"CA-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTEU",
+			"ComponentName":"EU-RTM",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTEU",
+			"ComponentName":"EU-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTUS",
+			"ComponentName":"US-CHINO",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTUS",
+			"ComponentName":"US-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTJP",
+			"ComponentName":"JP-TYO",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTJP",
+			"ComponentName":"JP-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTIN",
+			"ComponentName":"IN-GUR",
+			"Weight":1
+		},
+		{
+			"ParentName":"HTIN",
+			"ComponentName":"IN-DRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"AMBR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"AMBR IND",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"BRAU",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"BRNZ",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"HTCA",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"HTEU",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"HTUS",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"HTJP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Distribution Centres by Company",
+			"ComponentName":"HTIN",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"DEM Distribution Centre.subsets/Default.json"
+	]
+}
