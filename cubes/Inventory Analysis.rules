@@ -1,0 +1,29 @@
+SKIPCHECK;
+
+# Stock Cost AUD currency conversion
+['Currency':'AUD', 'Stock Cost']=N:
+IF ( DB('}ElementAttributes_Entity', !Entity, 'Local Currency' ) @<> 'AUD',
+  DB('Inventory Analysis', !Entity, !Year, !Month, !Product, DB('}ElementAttributes_Entity', !'Entity', 'Local Currency' ), !DEM Distribution Centre, 'Stock Cost' ) \
+  DB( 'FX Rates', 'Actual', !Year, !Month, DB('}ElementAttributes_Entity', !Entity, 'Local Currency'), 'Plan' ),
+  STET);
+
+
+FEEDERS;
+
+['EUR', 'Stock Cost'] =>
+['AUD', 'Stock Cost'];
+
+['USD', 'Stock Cost'] =>
+['AUD', 'Stock Cost'];
+
+['CAD', 'Stock Cost'] =>
+['AUD', 'Stock Cost'];
+
+['NZD', 'Stock Cost'] =>
+['AUD', 'Stock Cost'];
+
+['JPY', 'Stock Cost'] =>
+['AUD', 'Stock Cost'];
+
+['INR', 'Stock Cost'] =>
+['AUD', 'Stock Cost'];

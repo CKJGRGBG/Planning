@@ -1,0 +1,45 @@
+{
+	"@type":"MDXView",
+	"Name":"Default",
+	"MDX@Code.link":"Default.mdx",
+	"Meta": {
+		"Aliases": {
+			"[Entity].[Entity]": "MEMBER_NAME",
+			"[Year].[Year]": "MEMBER_NAME",
+			"[Month].[Month]": "MEMBER_NAME",
+			"[DEM Distribution Centre].[DEM Distribution Centre]": "Code and Description",
+			"[Currency].[Currency]": "MEMBER_NAME",
+			"[Product].[Product]": "Name"
+		},
+		"ExpandAboves": {
+			"[Inventory Analysis Measure].[Inventory Analysis Measure]": false,
+			"[Entity].[Entity]": false,
+			"[Year].[Year]": false,
+			"[Month].[Month]": false,
+			"[DEM Distribution Centre].[DEM Distribution Centre]": false,
+			"[Currency].[Currency]": false,
+			"[Product].[Product]": false
+		},
+		"ContextSets": {
+			"[Entity].[Entity]": {
+				"SubsetName": "Default",
+				"IsPublic": true
+			},
+			"[Year].[Year]": {
+				"SubsetName": "Default",
+				"IsPublic": true
+			},
+			"[Month].[Month]": {
+				"SubsetName": "Default",
+				"IsPublic": true
+			},
+			"[DEM Distribution Centre].[DEM Distribution Centre]": {
+				"Expression": "{[DEM Distribution Centre].[DEM Distribution Centre].[All Distribution Centres by Company]}"
+			},
+			"[Currency].[Currency]": {
+				"SubsetName": "Default",
+				"IsPublic": true
+			}
+		}
+	}
+}

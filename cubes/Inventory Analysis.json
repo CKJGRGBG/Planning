@@ -1,0 +1,33 @@
+{
+	"@type":"Cube",
+	"Name":"Inventory Analysis",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Entity')"
+		},
+		{
+			"@id":"Dimensions('Year')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		},
+		{
+			"@id":"Dimensions('Product')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('DEM Distribution Centre')"
+		},
+		{
+			"@id":"Dimensions('Inventory Analysis Measure')"
+		}
+	],
+	"Rules@Code.link":"Inventory Analysis.rules",
+	"Views@Code.links":
+	[
+		"Inventory Analysis.views/Default.json"
+	]
+}
