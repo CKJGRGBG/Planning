@@ -1,0 +1,89 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Product Business",
+	"ElementsSortType":"ByName",
+	"ComponentsSortType":"ByName",
+	"Elements":
+	[
+		{
+			"Name":"All Product Business",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Appliance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Crystella",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cylinder",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Hardware & Industrial",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Heating",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Plumbing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Refrigeration",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Refrigeration Rentals",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Appliance",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Crystella",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Cylinder",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Hardware & Industrial",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Heating",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Plumbing",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Refrigeration",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Product Business",
+			"ComponentName":"Refrigeration Rentals",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

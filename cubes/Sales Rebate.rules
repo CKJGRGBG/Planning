@@ -1,0 +1,7 @@
+SKIPCHECK;
+
+['Rebate Measure':'Rebate Measure':'Customer'] = C:
+ConsolidatedAvg( 2,'', !Entity, !Year, !Month, !Product Business, !DEM Customer, 'Customer');
+
+['Rebate Measure':'Rebate Measure':'LTI'] = C:
+ConsolidatedAvg( 2,'', !Entity, !Year, !Month, !Product Business, !DEM Customer, 'LTI');

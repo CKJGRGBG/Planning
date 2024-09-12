@@ -1,8 +1,8 @@
 {
 	"@type":"Process",
-	"Name":"INV Cub Load Inventory Analysis - FULL",
+	"Name":"SAL Dim Product Update 00",
 	"HasSecurityAccess":false,
-	"Code@Code.link":"INV Cub Load Inventory Analysis - FULL.ti",
+	"Code@Code.link":"SAL Dim Product Update 00.ti",
 	"DataSource":
 	{
 		"Type":"ODBC",
@@ -10,69 +10,69 @@
 		"dataSourceNameForClient":"BromicConnection2",
 		"userName":"bromicadmin",
 		"password":"RSTUSHr9S@Rg",
-		"query":"SELECT [company_code]\r\n\t, [FinYear]\r\n\t, [Mth]\r\n\t, [item_no]\r\n\t, [currency_local]\r\n\t, [location_code]\r\n\t, [on_hand_quantity]\r\n\t, [on_hand_cost_local]\r\nFROM [BromicDW].[dbo].fact_inventory\r\nWHERE [inventory_date] > '2018-01-01'\r\n\tAND [on_hand_quantity] != 0"
+		"query":"SELECT [product_no]\r\n      ,[product_name]\r\n      ,[business_unit_code]\r\n      ,[item_category_code]\r\n      ,[item_category_name]\r\n      ,[product_group_code]\r\n      ,[product_group_name]\r\n      ,[business_unit_name]\r\n  FROM [BromicDW].[dbo].[vw_pa_dim_Product]"
 	},
 	"Parameters":[],
 	"Variables":
 	[
 		{
-			"Name":"entity_code",
+			"Name":"product_no",
 			"Type":"String",
 			"Position":1,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"FinYear",
+			"Name":"product_name",
 			"Type":"String",
 			"Position":2,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"Mth",
+			"Name":"business_unit_code",
 			"Type":"String",
 			"Position":3,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"item_no",
+			"Name":"item_category_code",
 			"Type":"String",
 			"Position":4,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"currency_local",
+			"Name":"item_category_name",
 			"Type":"String",
 			"Position":5,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"distribution_center",
+			"Name":"product_group_code",
 			"Type":"String",
 			"Position":6,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"on_hand_quantity",
-			"Type":"Numeric",
+			"Name":"product_group_name",
+			"Type":"String",
 			"Position":7,
 			"StartByte":0,
 			"EndByte":0
 		},
 		{
-			"Name":"on_hand_cost_local",
-			"Type":"Numeric",
+			"Name":"business_unit_name",
+			"Type":"String",
 			"Position":8,
 			"StartByte":0,
 			"EndByte":0
 		}
 	],
-	"UID": "1725515171000",
+	"UID": "172522759300023",
 	"UIData": "_ParameterConstraints=e30=\f",
 	"VariablesUIData": [
 		"VarType=32\fColType=827\f",
@@ -81,7 +81,7 @@
 		"VarType=32\fColType=827\f",
 		"VarType=32\fColType=827\f",
 		"VarType=32\fColType=827\f",
-		"VarType=33\fColType=827\f",
-		"VarType=33\fColType=827\f"
+		"VarType=32\fColType=827\f",
+		"VarType=32\fColType=827\f"
 	]
 }

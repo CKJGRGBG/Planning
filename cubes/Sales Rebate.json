@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"Sales Rebate",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Entity')"
+		},
+		{
+			"@id":"Dimensions('Year')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		},
+		{
+			"@id":"Dimensions('Product Business')"
+		},
+		{
+			"@id":"Dimensions('DEM Customer')"
+		},
+		{
+			"@id":"Dimensions('Rebate Measure')"
+		}
+	],
+	"Rules@Code.link":"Sales Rebate.rules",
+	"Views@Code.links":[]
+}

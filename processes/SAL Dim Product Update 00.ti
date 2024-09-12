@@ -1,0 +1,88 @@
+#region Prolog
+
+#Define contstants and variables
+cDim = 'Product';
+
+#Region #Datasource
+ODBCOpen('BromicConnection2', 'bromicadmin', 'RSTUSHr9S@Rg');
+DatasourcePassword = 'RSTUSHr9S@Rg';
+#EndRegion
+
+#Create Dimension
+IF (DimensionExists( cDim )=0);
+    DimensionCreate( cDim );
+ENDIF;  
+
+#Define Parent
+cTotal = 'All Products';
+DimensionElementInsert ( cDim, '', cTotal, 'C'); 
+
+#Add attributes
+AttrInsert( cDim, '', 'Name', 'A' );
+AttrInsert( cDim, '', 'Category Code', 'S' );
+AttrInsert( cDim, '', 'Category Name', 'S' );
+AttrInsert( cDim, '', 'Product Code', 'S' );
+AttrInsert( cDim, '', 'Product Name', 'S' );
+AttrInsert( cDim, '', 'Business Code', 'S' );
+AttrInsert( cDim, '', 'Business Name', 'S' );
+
+
+#Region #Unwind Dimension
+    vDimensionUW = cDim;
+    vIndex = 1;
+    vDimSize = DIMSIZ(vDimensionUW);
+    WHILE(vIndex < vDimSize);
+        vElementUW = DIMNM(vDimensionUW,vIndex);
+        vChildSize = ELCOMPN(vDimensionUW,vElementUW);
+    WHILE(vChildSize > 0);
+        vChildElementUW = ELCOMP(vDimensionUW,vElementUW,vChildSize);
+        DIMENSIONELEMENTCOMPONENTDELETE(vDimensionUW, vElementUW, vChildElementUW );
+        vChildSize = vChildSize - 1;
+    END;
+        vIndex = vIndex + 1;
+    END;
+#EndRegion
+
+#endregion
+#region Metadata
+
+    #Add Leaf and parents
+    DimensionElementInsert( cDim, '', product_no, 'N' );
+    DimensionElementInsert ( cDim, '', business_unit_code, 'C');
+    DimensionElementInsert ( cDim, '', item_category_code, 'C');
+    DimensionElementInsert ( cDim, '', product_group_code, 'C');    
+
+    DimensionElementComponentAdd ( cDim, cTotal, business_unit_code,1);
+    DimensionElementComponentAdd ( cDim, business_unit_code, item_category_code,1);
+    DimensionElementComponentAdd ( cDim, item_category_code, product_group_code,1);
+
+    IF (product_group_code @='');
+        #CK 21-May-24 
+        #DimensionElementComponentAdd ( cDim, cTotal, product_no,1);
+        DimensionElementComponentAdd ( cDim, business_unit_code, product_no,1);   
+    ELSE ;
+        DimensionElementComponentAdd ( cDim, product_group_code, product_no,1);
+    ENDIF ;
+        
+#endregion
+#region Data
+
+    AttrPutS( product_no | ' : ' | product_name, cDim, product_no, 'Name' );
+    AttrPutS( item_category_code | ' : ' | item_category_name, cDim, item_category_code, 'Name' );
+    AttrPutS( product_group_code | ' : ' | product_group_name, cDim, product_group_code, 'Name' );
+
+    AttrPutS( item_category_code, cDim, product_no, 'Category Code' );
+    AttrPutS( item_category_name, cDim, product_no, 'Category Name' );
+    AttrPutS( product_group_code, cDim, product_no, 'Product Code' );
+    AttrPutS( product_group_name, cDim, product_no, 'Product Name' );
+     AttrPutS( business_unit_code, cDim, product_no, 'Business Code' );
+    AttrPutS( business_unit_name, cDim, product_no, 'Business Name' );
+
+
+
+#endregion
+#region Epilog
+
+
+
+#endregion
